@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
 
 
-#get 'users/index'
+get 'users#index'
 
 resources :users
 
