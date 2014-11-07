@@ -2,16 +2,16 @@ Rails.application.routes.draw do
   
 
 
-get 'users#index'
+#get 'users/index'
 
 resources :users
 
-root 'users#index'
+# broot 'users#index'
 
   get 'users' => 'users#index' 
    controller :sessions do 
-    get  'login' => :new 
-    post 'login' => :create 
+   get  'login' => :new 
+  post 'login' => :create 
     delete 'logout' => :destroy 
   end 
 
