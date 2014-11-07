@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   
-  get "users/index"
 
-get 'users/index'
+
+#get 'users/index'
 
 resources :users
+
+root 'users#index'
 
   get 'users' => 'users#index' 
    controller :sessions do 
