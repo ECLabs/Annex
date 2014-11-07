@@ -1,4 +1,14 @@
-Annex::Application.routes.draw do
+Rails.application.routes.draw do
+  
+resources :users
+
+  get 'users' => 'users#index' 
+   controller :sessions do 
+    get  'login' => :new 
+    post 'login' => :create 
+    delete 'logout' => :destroy 
+  end 
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -8,7 +18,7 @@ Annex::Application.routes.draw do
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  # This route can be invoked with purchase_url(:id => product.id)
+  # This route can be invoked with purchase_url(:id => product.id)cmd
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
