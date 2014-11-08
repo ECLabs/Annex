@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Annex::Application.config.secret_token = 'ac31abace503c03181857a658253c137ccdedfdc6e3a22ddc8c48e430b57532eaef0f94fc874b428d67e74a0998599ba31662c0e9ac01ba42d1c967dc04ba6ea'
+App::Application.config.secret_token = 'c691fb27ae80ea7349da3e5d8cde6a099e7f1e60cc2eb75acb13ee3bc841ed4f56b2f2eb5c869ec20ebeecc2d407bc37fcdd7b96486e4599c6781cb718ea2d0b'

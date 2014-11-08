@@ -1,19 +1,6 @@
-Rails.application.routes.draw do
-  
+App::Application.routes.draw do
+  resources :employees
 
-
-#get 'users/index'
-
-resources :users
-
-# broot 'users#index'
-
-  get 'users' => 'users#index' 
-   controller :sessions do 
-   get  'login' => :new 
-  post 'login' => :create 
-    delete 'logout' => :destroy 
-  end 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -24,7 +11,7 @@ resources :users
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  # This route can be invoked with purchase_url(:id => product.id)cmd
+  # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
