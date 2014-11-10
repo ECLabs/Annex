@@ -1,4 +1,4 @@
-<%= form_for(@employee) do |f| %>
+<%= form_for @employee, :html => { :multipart => true} do |f| %>
   <% if @employee.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
@@ -12,8 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :firstName %><br />
+    <%= f.label 'First Name' %><br />
     <%= f.text_field :firstName %>
+  </div>
+  <div class="field">
+    <%= f.label :MiddleName %><br />
+    <%= f.text_field :middleName %>
   </div>
   <div class="field">
     <%= f.label :lastName %><br />
@@ -27,6 +31,19 @@
     <%= f.label :experienceLevel %><br />
     <%= f.text_field :experienceLevel %>
   </div>
+<% f.fields_for :photo do |builder| %>
+ 
+
+ 
+<p>
+<%= builder.label :photo, "Image File" %>
+<%= builder.file_field :photo %>
+</p>
+ 
+
+ 
+<% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -1,12 +1,22 @@
 <p id="notice"><%= notice %></p>
-
 <p>
-  <b>Firstname:</b>
-  <%= @employee.firstName %>
+  <b>ID:</b>
+  <%= @employee.id %>
 </p>
 
 <p>
-  <b>Lastname:</b>
+  <b>First Name:</b>
+  <%= @employee.firstName %>
+</p>
+<p>
+
+  <b>Middle Name:</b>
+  <%= @employee.middleName %>
+</p>
+
+
+<p>
+  <b>Last Name:</b>
   <%= @employee.lastName %>
 </p>
 
@@ -16,10 +26,10 @@
 </p>
 
 <p>
-  <b>Experiencelevel:</b>
+  <b>Experience Level:</b>
   <%= @employee.experienceLevel %>
 </p>
 
 
-<%= link_to 'Edit', edit_employee_path(@employee) %> |
-<%= link_to 'Back', employees_path %>
+<%= link_to 'Edit This Employee', edit_employee_path(@employee) %> |
+<%= link_to 'Back to Employee List', employees_path %>

@@ -3,27 +3,41 @@
 <table>
   <tr>
     <th>Firstname</th>
+    <th>&nbsp;</th>
     <th>Lastname</th>
+    <th>&nbsp;</th>
     <th>Title</th>
+    <th>&nbsp;</th>
     <th>Experiencelevel</th>
+    <th>&nbsp;</th>
     <th></th>
+    <th>&nbsp;</th>
     <th></th>
+    <th>&nbsp;</th>
     <th></th>
+    <th>&nbsp;</th>
   </tr>
 
 <% @employees.each do |employee| %>
   <tr>
     <td><%= employee.firstName %></td>
+    <td>&nbsp;</td>
     <td><%= employee.lastName %></td>
+    <td>&nbsp;</td>
     <td><%= employee.title %></td>
+    <td>&nbsp;</td>
     <td><%= employee.experienceLevel %></td>
-    <td><%= link_to 'Show', employee %></td>
+    <td>&nbsp;</td>
+    <td><%= link_to 'Display Details (No Editing)', employee %></td>
+    <td>&nbsp;</td>
     <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
-    <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td>&nbsp;</td>
+    <td><%= link_to 'Delete', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td>&nbsp;</td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Employee', new_employee_path %>
+<%= link_to 'Add New Employee', new_employee_path %>

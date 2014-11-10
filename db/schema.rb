@@ -11,15 +11,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141108152858) do
+ActiveRecord::Schema.define(:version => 20141110143243) do
+
+  create_table "admins", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "employees", :force => true do |t|
+    t.integer  "employeeNumber"
     t.string   "firstName"
     t.string   "lastName"
+    t.string   "middleName"
     t.string   "title"
     t.string   "experienceLevel"
+    t.integer  "cellPhone"
+    t.binary   "photo"
+    t.string    "CareerLevelID"
+    t.string    "CareerTrackID"
+    t.string    "ProjectId"
+    t.datetime   "StartDate"
+    t.datetime   "EndDate"
+    t.datetime  "LastLogin"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "photos", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
