@@ -10,27 +10,39 @@
       </ul>
     </div>
   <% end %>
-
+<div class="field">
+    <%= f.label 'Employee Number' %><br />
+    <%= f.text_field :employeeNumber %>
+  </div>
   <div class="field">
     <%= f.label 'First Name' %><br />
     <%= f.text_field :firstName %>
   </div>
   <div class="field">
-    <%= f.label :MiddleName %><br />
+    <%= f.label 'Middle Name' %><br />
     <%= f.text_field :middleName %>
   </div>
   <div class="field">
-    <%= f.label :lastName %><br />
+    <%= f.label 'Last Name' %><br />
     <%= f.text_field :lastName %>
   </div>
   <div class="field">
-    <%= f.label :title %><br />
+    <%= f.label 'Job title' %><br />
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :experienceLevel %><br />
+    <%= f.label 'experience Level' %><br />
     <%= f.text_field :experienceLevel %>
   </div>
+  <div class="field">
+    <%= f.label 'Cell Phone' %><br />
+    <%= f.text_field :cellPhone %>
+  </div>
+    <div class="field">
+    <%= f.label 'Career Level' %><br />
+    <%= f.text_field :CareerLevelID %>
+  </div>
+
 <% f.fields_for :photo do |builder| %>
  
 
