@@ -43,18 +43,13 @@
     <%= f.text_field :CareerLevelID %>
   </div>
 
-<% f.fields_for :photo do |builder| %>
+ <div class="field">
+    <%= f.label :image  %><br />
+    <%= f.text_field :image %>
+  </div>
  
 
  
-<p>
-<%= builder.label :photo, "Image File" %>
-<%= builder.file_field :photo %>
-</p>
- 
-
- 
-<% end %>
 
   <div class="actions">
     <%= f.submit %>

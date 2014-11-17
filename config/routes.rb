@@ -1,7 +1,9 @@
 App::Application.routes.draw do
   resources :employees
 
-
+get "image" => Dragonfly.app.endpoint { |params, app|
+  app.fetch_file("some/dir/#{params[:file]}").thumb(params[:size])
+}
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

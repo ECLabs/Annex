@@ -1,5 +1,5 @@
 class Employee < ActiveRecord::Base
   
-  attr_accessible :experienceLevel, :firstName, :lastName, :title, :middleName, :CareerLevelID, :employeeNumber, :cellPhone
-
+  attr_accessible :image, :experienceLevel, :firstName, :lastName, :title, :middleName, :CareerLevelID, :employeeNumber, :cellPhone
+#dragonfly_accessor :photo
 end
